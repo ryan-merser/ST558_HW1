@@ -1,0 +1,44 @@
+---
+title: "HW1 - Data Science"
+format: html
+editor: visual
+---
+
+# Questions about Data Science
+
+- What do you think being a data scientist is about?
+
+The Wikipedia entry for data science describes a data scientist as "a professional who creates programming code and combines it with statistical knowledge to summarize data" which I agree with. In previous classes that touch on data science, we use our statistical knowledge and techniques to import, clean, and analyze data. The Wikipedia entry also mentions "data science is multifaceted", which I agree with as many people have their own definition of what it entails.
+
+- What differences/similarities do you see between data scientists and statisticians?
+
+Statisticians and inferential techniques have been around for centuries (since 1749), while data science is a relatively modern concept. Tukey first described what resembles modern data science in 1962, and the exact job title wasn't coined until the 2010s, as computer technology and programming languages rapidly evolved and saw widespread adoption in the early 21st century. The practitioners guide to data science claims "data scientists need to deal with more varieties of data", and "statisticians focus more on modeling, while data scientists focus more on data and usually bring models to data". I think this is a great differentiation, as modern data scientists are faced with big, unstructured, messy data embedded in some production system
+
+- How do you view yourself in relation to these two areas?
+
+I align more with the data scientist side by nature of the fast-growing computation power and demand for technical skills. After taking the 'Analysis of big data' class last semester, I believe this need for analyzing big data will only grow. AI being used in many workplace applications will continue to grow as well, further evolving the data scientist role. One point from the practitioners article I found interesting regarding this is "When people talk about all the machine learning and artificial intelligence algorithms, they often overlook the critical data engineering part that makes everything possible".
+
+# Iris code
+
+```{r}
+y <- density(iris$Petal.Width)
+```
+
+- Create an R code chunk to determine the class, type, and structure of the object y
+
+```{r}
+class(y)
+# density
+typeof(y)
+# list
+str(y)
+# List of 8
+```
+
+- Create an R code chunk that uses the plot function on y
+
+```{r}
+#| echo: false 
+plot(y, main = "Density Plot of Petal Width")
+```
+Here we have a plot of our object y, which is the density of flower petal widths from the iris dataset. I used the main = option to change the title. From the two peaks of this plot, flower petal width appears to be bimodal.
